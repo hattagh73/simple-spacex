@@ -1,0 +1,140 @@
+/* Import Poppins Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Typography Vars */
+$font_body: 'Poppins', sans-serif;
+
+/* Colors Vars */
+$color_bg: #181818;
+$color_container: #202020;
+$color_text: #fafafa;
+
+/* START The Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color_bg;
+  font-family: $font_body;
+  // border: solid 1px white;
+}
+
+img {
+  max-width: 100%;
+  height: 230px;
+  border-radius: 2.7px;
+}
+
+.centering_container {
+  // border: solid 2px blue;
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* END The Base */
+
+/* START Header */
+.header_parent {
+  background-color: $color_container;
+  color: $color_text;
+  width: 100%;
+  border-bottom: solid 1px rgba(255, 255, 255, .1);
+}
+
+.header_child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.7rem;
+  .header_title > h1 {
+    font-size: 26px;
+  }
+}
+
+.search_container {
+  background-color: $color_bg;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-radius: 40px;
+}
+
+.icon_search {
+  width: 23px;
+  height: 23px;
+  margin-left: 4px;
+}
+
+.search_bar {
+
+  width: 100%;
+  padding: 7px;
+  border-radius: 40px;
+
+  outline: none;
+  appearance: none;
+  background: none;
+  border: none;
+
+  background-color: $color_bg;
+  color: $color_text;
+
+}
+/* END Header */
+
+/* START Body */
+.main_body {
+  margin-top: 2rem;
+}
+
+.section {
+  // border: solid 3px blue;
+  height: auto;
+  overflow:auto;
+  background-color: $color_bg;
+}
+
+.container_body {
+  // border: solid 1px yellow;
+  padding: 2rem;
+  display: grid;
+  gap: 0.4rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  // position: relative
+}
+
+.rocket_content {
+  background-color: #27302c;
+  display: flex;
+  flex-direction: column;
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(3,74,40,.15);
+  transition: transform 0.4s;
+  // padding: .75rem;
+  position: relative;
+  .rocket_name {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    font-size: 10px;
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+.rocket_content:hover{
+  transform: scale(0.9);
+}
+/* END Body */
+
